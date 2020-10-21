@@ -7,11 +7,13 @@ Created on Tue Oct 20 14:48:56 2020
 
 
 import random
-r = random.randint(1, 100)
+start = int(input("Please decide a starting point (a number) of the range: "))
+end = int(input("please decide an ending point (a number) of the range: "))
+r = random.randint(start, end)
 count = 0
 while True:
     count = count + 1 # can also be written as count += 1 
-    num = int(input("Please guess a number between 1 and 100: "))
+    num = int(input("Please guess a number within the range:"))
     if r == num:
         print ("Congratulations. You guessed it right!")
         print ("This is the", count, "time(s) you tried")
